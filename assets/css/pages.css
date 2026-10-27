@@ -1,0 +1,264 @@
+.dashboard-page[hidden] {
+    display: none !important;
+}
+
+.dashboard-page {
+    width: 100%;
+    min-width: 0;
+}
+
+.dashboard-page .crud-layout {
+    width: 100%;
+    min-width: 0;
+}
+
+.dashboard-page .table-wrapper {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+/* SETTINGS PAGE */
+.settings-section {
+    max-width: 900px;
+}
+
+.settings-info {
+    display: grid;
+    gap: 0;
+}
+
+.settings-info > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    gap: 12px;
+    padding: 18px 0;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.settings-info > div:last-child {
+    border-bottom: none;
+}
+
+.settings-info span {
+    color: var(--text-muted);
+    font-size: 13px;
+}
+
+.settings-info strong {
+    color: var(--text);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.deskripsi-justify {
+    text-align: justify;
+    line-height: 1.6;
+}
+
+html {
+    scrollbar-gutter: stable;
+    scroll-behavior: auto;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #f6f7fd;
+    background-image: radial-gradient(
+        circle at 88% 7%,
+        #ece7ff 0%,
+        transparent 35%
+    );
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.app-content {
+    min-width: 0;
+    width: 100%;
+}
+
+.dashboard-page {
+    width: 100%;
+    min-width: 0;
+}
+
+.dashboard-page[hidden] {
+    display: none !important;
+}
+
+.settings-section {
+    max-width: none;
+    width: 100%;
+}
+
+#pageOverview > .statistik-section,
+#pagePengguna .crud-table > .card,
+#pageSetting > .settings-section {
+    width: 100%;
+    padding: 28px;
+}
+
+.app-content > .header {
+    margin-bottom: 26px;
+}
+
+.app-content > main {
+    min-width: 0;
+    width: 100%;
+}
+
+#pagePengguna .crud-layout,
+#pagePengguna .crud-table {
+    min-width: 0;
+    width: 100%;
+}
+
+#pagePengguna .table-wrapper {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+@media (max-width: 850px) {
+
+    .app-content {
+        padding-inline: 24px;
+    }
+
+    #pageOverview > .statistik-section,
+    #pagePengguna .crud-table > .card,
+    #pageSetting > .settings-section {
+        padding: 24px;
+    }
+
+}
+
+@media (max-width: 580px) {
+
+    .app-content {
+        padding-inline: 16px;
+    }
+
+    .topbar {
+        min-height: 64px;
+    }
+
+    .app-content > .header {
+        margin-bottom: 22px;
+    }
+
+    #pageOverview > .statistik-section,
+    #pagePengguna .crud-table > .card,
+    #pageSetting > .settings-section {
+        padding: 18px;
+    }
+
+    .header h1 {
+        font-size: 26px;
+    }
+
+    .settings-info > div {
+        gap: 8px;
+    }
+
+}
+
+@media (max-width: 380px) {
+
+    .app-content {
+        padding-inline: 12px;
+    }
+
+    #pageOverview > .statistik-section,
+    #pagePengguna .crud-table > .card,
+    #pageSetting > .settings-section {
+        padding: 16px;
+    }
+
+    .topbar-trail {
+        min-width: 0;
+        font-size: 11px;
+        gap: 6px;
+    }
+
+    .topbar-date {
+        display: none;
+    }
+
+}
+
+/* TOPBAR PROFILE */
+.topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.topbar-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    line-height: 1.4;
+}
+
+.topbar-profile strong {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text);
+}
+
+.topbar-profile small {
+    font-size: 11px;
+    color: var(--text-muted);
+}
+
+.topbar-avatar {
+    flex-shrink: 0;
+    background: #dce9fe;
+    color: #2666df;
+    font-weight: 800;
+}
+
+@media (max-width: 580px) {
+    .topbar-profile {
+        display: none;
+    }
+}
+
+.profile-link {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.profile-link:hover strong {
+    color: var(--primary);
+}
+
+.profile-link:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 4px;
+    border-radius: 10px;
+}
+
+.topbar-profile-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.topbar-profile-link:hover .topbar-avatar,
+.sidebar-footer:hover .avatar {
+    background: #eeeaff;
+    color: var(--primary);
+}
+
+.topbar-avatar,
+.sidebar-footer .avatar {
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}

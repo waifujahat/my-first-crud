@@ -1,0 +1,352 @@
+export const SAMPLE_USERS = [
+    [
+        "Aditya Pratama",
+        "aditya.pratama@example.com",
+        "081270000001",
+        "Laki-laki",
+        "Malaysia"
+    ],
+    [
+        "Siti Nur Aisyah",
+        "siti.aisyah@example.com",
+        "081270000002",
+        "Perempuan",
+        "Indonesia"
+    ],
+    [
+        "Muhammad Rizky",
+        "muhammad.rizky@example.com",
+        "081270000003",
+        "Laki-laki",
+        "Indonesia"
+    ],
+    [
+        "Nadia Maharani",
+        "nadia.maharani@example.com",
+        "081270000004",
+        "Perempuan",
+        "Indonesia"
+    ],
+    [
+        "Dimas Saputra",
+        "dimas.saputra@example.com",
+        "081270000005",
+        "Laki-laki",
+        "Indonesia"
+    ],
+    [
+        "Putri Amelia",
+        "putri.amelia@example.com",
+        "081270000006",
+        "Perempuan",
+        "Indonesia"
+    ],
+    [
+        "Fajar Ramadhan",
+        "fajar.ramadhan@example.com",
+        "081270000007",
+        "Laki-laki",
+        "Indonesia"
+    ],
+    [
+        "Dewi Anggraini",
+        "dewi.anggraini@example.com",
+        "081270000008",
+        "Perempuan",
+        "Indonesia"
+    ],
+    [
+        "Rizky Firmansyah",
+        "rizky.firmansyah@example.com",
+        "081270000009",
+        "Laki-laki",
+        "Indonesia"
+    ],
+    [
+        "Aulia Rahmawati",
+        "aulia.rahmawati@example.com",
+        "081270000010",
+        "Perempuan",
+        "Indonesia"
+    ],
+    [
+        "Bagus Setiawan",
+        "bagus.setiawan@example.com",
+        "081270000011",
+        "Laki-laki",
+        "Indonesia"
+    ],
+    [
+        "Intan Permatasari",
+        "intan.permatasari@example.com",
+        "081270000012",
+        "Perempuan",
+        "Indonesia"
+    ],
+    [
+        "Andika Wijaya",
+        "andika.wijaya@example.com",
+        "081270000013",
+        "Laki-laki",
+        "Indonesia"
+    ],
+    [
+        "Fitri Handayani",
+        "fitri.handayani@example.com",
+        "081270000014",
+        "Perempuan",
+        "Indonesia"
+    ],
+    [
+        "Rangga Mahendra",
+        "rangga.mahendra@example.com",
+        "081270000015",
+        "Laki-laki",
+        "Indonesia"
+    ],
+    [
+        "Nabila Zahra",
+        "nabila.zahra@example.com",
+        "081270000016",
+        "Perempuan",
+        "Indonesia"
+    ],
+    [
+        "Arif Nugroho",
+        "arif.nugroho@example.com",
+        "081270000017",
+        "Laki-laki",
+        "Indonesia"
+    ],
+    [
+        "Citra Lestari",
+        "citra.lestari@example.com",
+        "081270000018",
+        "Perempuan",
+        "Indonesia"
+    ],
+    [
+        "Yoga Prasetyo",
+        "yoga.prasetyo@example.com",
+        "081270000019",
+        "Laki-laki",
+        "Indonesia"
+    ],
+    [
+        "Anisa Putri",
+        "anisa.putri@example.com",
+        "081270000020",
+        "Perempuan",
+        "Indonesia"
+    ],
+    [
+        "Ahmad Firdaus",
+        "ahmad.firdaus@example.com",
+        "081270000021",
+        "Laki-laki",
+        "Malaysia"
+    ],
+    [
+        "Nur Farah",
+        "nur.farah@example.com",
+        "081270000022",
+        "Perempuan",
+        "Malaysia"
+    ],
+    [
+        "Muhammad Hakim",
+        "muhammad.hakim@example.com",
+        "081270000023",
+        "Laki-laki",
+        "Malaysia"
+    ],
+    [
+        "Aina Sofea",
+        "aina.sofea@example.com",
+        "081270000024",
+        "Perempuan",
+        "Malaysia"
+    ],
+    [
+        "Daniel Iskandar",
+        "daniel.iskandar@example.com",
+        "081270000025",
+        "Laki-laki",
+        "Malaysia"
+    ],
+    [
+        "Nurul Huda",
+        "nurul.huda@example.com",
+        "081270000026",
+        "Perempuan",
+        "Malaysia"
+    ],
+    [
+        "Syafiq Azman",
+        "syafiq.azman@example.com",
+        "081270000027",
+        "Laki-laki",
+        "Malaysia"
+    ],
+    [
+        "Amira Zulaikha",
+        "amira.zulaikha@example.com",
+        "081270000028",
+        "Perempuan",
+        "Malaysia"
+    ],
+    [
+        "Hafiz Rahman",
+        "hafiz.rahman@example.com",
+        "081270000029",
+        "Laki-laki",
+        "Malaysia"
+    ],
+    [
+        "Siti Balqis",
+        "siti.balqis@example.com",
+        "081270000030",
+        "Perempuan",
+        "Malaysia"
+    ],
+    [
+        "Haruto Tanaka",
+        "haruto.tanaka@example.com",
+        "081270000031",
+        "Laki-laki",
+        "Jepang"
+    ],
+    [
+        "Yui Nakamura",
+        "yui.nakamura@example.com",
+        "081270000032",
+        "Perempuan",
+        "Jepang"
+    ],
+    [
+        "Ren Takahashi",
+        "ren.takahashi@example.com",
+        "081270000033",
+        "Laki-laki",
+        "Jepang"
+    ],
+    [
+        "Sakura Yamamoto",
+        "sakura.yamamoto@example.com",
+        "081270000034",
+        "Perempuan",
+        "Jepang"
+    ],
+    [
+        "Kaito Kobayashi",
+        "kaito.kobayashi@example.com",
+        "081270000035",
+        "Laki-laki",
+        "Jepang"
+    ],
+    [
+        "Kim Minjun",
+        "kim.minjun@example.com",
+        "081270000036",
+        "Laki-laki",
+        "Korea Selatan"
+    ],
+    [
+        "Lee Seoyeon",
+        "lee.seoyeon@example.com",
+        "081270000037",
+        "Perempuan",
+        "Korea Selatan"
+    ],
+    [
+        "Park Jihoon",
+        "park.jihoon@example.com",
+        "081270000038",
+        "Laki-laki",
+        "Korea Selatan"
+    ],
+    [
+        "Choi Yuna",
+        "choi.yuna@example.com",
+        "081270000039",
+        "Perempuan",
+        "Korea Selatan"
+    ],
+    [
+        "Jung Hyunwoo",
+        "jung.hyunwoo@example.com",
+        "081270000040",
+        "Laki-laki",
+        "Korea Selatan"
+    ],
+    [
+        "James Anderson",
+        "james.anderson@example.com",
+        "081270000041",
+        "Laki-laki",
+        "Amerika Serikat"
+    ],
+    [
+        "Emily Johnson",
+        "emily.johnson@example.com",
+        "081270000042",
+        "Perempuan",
+        "Amerika Serikat"
+    ],
+    [
+        "Michael Brown",
+        "michael.brown@example.com",
+        "081270000043",
+        "Laki-laki",
+        "Amerika Serikat"
+    ],
+    [
+        "Olivia Wilson",
+        "olivia.wilson@example.com",
+        "081270000044",
+        "Perempuan",
+        "Amerika Serikat"
+    ],
+    [
+        "Daniel Miller",
+        "daniel.miller@example.com",
+        "081270000045",
+        "Laki-laki",
+        "Amerika Serikat"
+    ],
+    [
+        "Alexander Smith",
+        "alexander.smith@example.com",
+        "081270000046",
+        "Laki-laki",
+        "Lainnya"
+    ],
+    [
+        "Sophia Martin",
+        "sophia.martin@example.com",
+        "081270000047",
+        "Perempuan",
+        "Lainnya"
+    ],
+    [
+        "Lucas Dubois",
+        "lucas.dubois@example.com",
+        "081270000048",
+        "Laki-laki",
+        "Lainnya"
+    ],
+    [
+        "Emma Fischer",
+        "emma.fischer@example.com",
+        "081270000049",
+        "Perempuan",
+        "Lainnya"
+    ],
+    [
+        "Oliver Taylor",
+        "oliver.taylor@example.com",
+        "081270000050",
+        "Laki-laki",
+        "Lainnya"
+    ]
+];

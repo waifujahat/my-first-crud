@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="id">
+    <!-- METADATA DAN STYLESHEET -->
+    <head>
+        <meta charset="utf-8"/>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+        <title>
+            CRUD OPERATOR
+        </title>
+        <meta name="description" content="Dashboard CRUD pengguna berbasis HTML, CSS, dan JavaScript modular."/>
+        <link href="./assets/css/base.css" rel="stylesheet"/>
+        <link href="./assets/css/dashboard.css" rel="stylesheet"/>
+        <link href="./assets/css/sidebar.css" rel="stylesheet"/>
+        <link href="./assets/css/pages.css" rel="stylesheet"/>
+        <link href="./assets/css/theme.css" rel="stylesheet"/>
+        <link href="./assets/css/music.css" rel="stylesheet"/>
+    </head>
+    <!-- END - METADATA DAN STYLESHEET -->
+    <body>
+        <!-- APP SHELL -->
+        <div class="app-shell">
+            <!-- SIDEBAR UTAMA -->
+            <aside
+                id="sidebarUtama"
+                aria-label="Navigasi utama"
+                class="app-sidebar"
+            >
+                <!-- TOMBOL TUTUP SIDEBAR -->
+                <button
+                    type="button"
+                    class="sidebar-close"
+                    id="btnCloseSidebar"
+                    aria-label="Tutup sidebar"
+                >
+                    &times;
+                </button>
+                <!-- END TOMBOL TUTUP SIDEBAR -->
+                <!-- LOGO DAN NAMA APLIKASI -->
+                <a class="brand" href="#overview">
+                    <span class="brand-mark">
+                        <svg aria-hidden="true" height="28" viewBox="0 0 24 24" width="28" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0h24v24H0z" fill="none">
+                            </path>
+                            <path d="M7.47 5.94c1.83 1.37 3.81 4.14 4.53 5.63c0.72 -1.49 2.7 -4.26 4.53 -5.63c1.33 -0.99 3.47 -1.75 3.47 0.68c0 0.49 -0.28 4.08 -0.45 4.66c-0.57 2.03 -2.65 2.55 -4.5 2.23c3.24 0.55 4.06 2.36 2.28 4.17c-3.38 3.44 -4.85 -0.87 -5.23 -1.97c-0.07 -0.2 -0.1 -0.3 -0.1 -0.22c-0 -0.08 -0.03 0.02 -0.1 0.22c-0.38 1.1 -1.86 5.41 -5.23 1.97c-1.78 -1.81 -0.96 -3.63 2.28 -4.17c-1.85 0.31 -3.93 -0.21 -4.5 -2.23c-0.17 -0.58 -0.45 -4.18 -0.45 -4.66c0 -2.43 2.14 -1.67 3.47 -0.68Z" fill="currentColor" fill-opacity="0" stroke="currentColor" stroke-dasharray="76" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                <animate attributeName="stroke-dashoffset" dur="0.6s" fill="freeze" values="76;0">
+                                </animate>
+                                <animate attributeName="fill-opacity" begin="0.6s" dur="0.4s" fill="freeze" to="1">
+                                </animate>
+                            </path>
+                        </svg>
+                    </span>
+                    <span>
+                        <strong>
+                            CRUD OPERATOR
+                        </strong>
+                        <small>
+                            BELAJAR MEMBUAT CRUD
+                        </small>
+                    </span>
+                </a>
+                <!-- END LOGO DAN NAMA APLIKASI -->
+                <div class="nav-caption">
+                    NAVIGASI
+                </div>
+                <!-- NAVIGASI SIDEBAR -->
+                <nav aria-label="Menu dashboard" class="side-nav">
+                    <!-- MENU BERANDA -->
+                    <a class="nav-link active" href="#overview" data-page="overview">
+                    <!-- ICON BERANDA -->
+                    <span class="nav-icon">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                        >
+                            <g
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                            >
+                                <!-- Bagian atas lonceng -->
+                                <path
+                                    fill="none"
+                                    stroke-dasharray="4"
+                                    d="M12 3v2"
+                                >
+                                    <animate
+                                        attributeName="stroke-dashoffset"
+                                        values="4;0"
+                                        dur="0.2s"
+                                        fill="freeze"
+                                    />
+                                </path>
+                                <!-- Badan utama lonceng -->
+                                <path
+                                    fill="currentColor"
+                                    fill-opacity="0"
+                                    stroke-dasharray="30"
+                                    stroke-dashoffset="30"
+                                    d="M12 5c-3.31 0 -6 2.69 -6 6l0 6c-1 0 -2 1 -2 2h8M12 5c3.31 0 6 2.69 6 6l0 6c1 0 2 1 2 2h-8"
+                                >
+                                    <animate
+                                        attributeName="stroke-dashoffset"
+                                        begin="0.2s"
+                                        dur="0.4s"
+                                        to="0"
+                                        fill="freeze"
+                                    />
+
+                                    <animate
+                                        attributeName="fill-opacity"
+                                        begin="0.9s"
+                                        dur="0.4s"
+                                        to="1"
+                                        fill="freeze"
+                                    />
+                                </path>
+                                <!-- Bagian bawah lonceng -->
+                                <path
+                                    fill="none"
+                                    stroke-dasharray="10"
+                                    stroke-dashoffset="10"
+                                    d="M10 20c0 1.1 0.9 2 2 2c1.1 0 2 -0.9 2 -2"
+                                >
+                                    <animate
+                                        attributeName="stroke-dashoffset"
+                                        begin="0.7s"
+                                        dur="0.2s"
+                                        to="0"
+                                        fill="freeze"
+                                    />
+                                </path>
+                            </g>
+                        </svg>
+                    </span>
+                    <!-- END ICON BERANDA -->
+                        Beranda
+                    </a>
+                    <!-- END MENU BERANDA -->
+                    <!-- ICON PENGGUNA -->
+                    <!-- MENU DATA PENGGUNA -->
+                    <a class="nav-link" href="#pengguna" data-page="pengguna">
+                    <span class="nav-icon" aria-hidden="true">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                        >
+                            <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-dasharray="28"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                            >
+                                <path
+                                    d="M4 21v-1c0 -3.31 2.69 -6 6 -6h4c3.31 0 6 2.69 6 6v1"
+                                >
+                                    <animate
+                                        attributeName="stroke-dashoffset"
+                                        dur="0.4s"
+                                        values="28;0"
+                                        fill="freeze"
+                                    />
+                                </path>
+                                <path
+                                    d="M12 11c-2.21 0 -4 -1.79 -4 -4c0 -2.21 1.79 -4 4 -4c2.21 0 4 1.79 4 4c0 2.21 -1.79 4 -4 4Z"
+                                    stroke-dashoffset="28"
+                                >
+                                    <animate
+                                        attributeName="stroke-dashoffset"
+                                        begin="0.4s"
+                                        dur="0.4s"
+                                        to="0"
+                                        fill="freeze"
+                                    />
+                                </path>
+                            </g>
+                        </svg>
+                    </span>
+                    <!-- END ICON PENGGUNA -->
+                    Data Pengguna
+                </a>
+                <!-- END MENU DATA PENGGUNA -->
+                     <!-- MENU SETTING -->
+                    <a class="nav-link" href="#setting" data-page="setting">
+                        <!-- ICON SETTING -->
+                        <span class="nav-icon" aria-hidden="true">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                            >
+                                <g
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                >
+                                    <!-- Lingkaran tengah -->
+                                    <path
+                                        d="M12 9c1.66 0 3 1.34 3 3c0 1.66 -1.34 3 -3 3c-1.66 0 -3 -1.34 -3 -3c0 -1.66 1.34 -3 3 -3Z"
+                                        stroke-dasharray="22"
+                                    >
+                                        <animate
+                                            attributeName="stroke-dashoffset"
+                                            dur="0.3s"
+                                            values="22;0"
+                                            fill="freeze"
+                                        />
+                                    </path>
+                                    <!-- Lingkaran luar -->
+                                    <path
+                                        d="M12 5.5c3.59 0 6.5 2.91 6.5 6.5c0 3.59 -2.91 6.5 -6.5 6.5c-3.59 0 -6.5 -2.91 -6.5 -6.5c0 -3.59 2.91 -6.5 6.5 -6.5Z"
+                                        stroke-dasharray="44"
+                                        stroke-dashoffset="44"
+                                    >
+                                        <animate
+                                            attributeName="stroke-dashoffset"
+                                            begin="0.3s"
+                                            dur="0.5s"
+                                            to="0"
+                                            fill="freeze"
+                                        />
+                                        <set
+                                            attributeName="opacity"
+                                            begin="0.8s"
+                                            to="0"
+                                            fill="freeze"
+                                        />
+                                    </path>
+                                    <!-- Ornamen kanan atas -->
+                                    <path
+                                        d="M15.24 6.37c0.41 0.23 0.8 0.51 1.14 0.83c0 0 2.62 -1.08 2.63 -1.06c0 0 1.56 2.7 1.56 2.7c0.01 0.03 -2.22 1.75 -2.22 1.75c0.1 0.45 0.15 0.93 0.15 1.41"
+                                        opacity="0"
+                                    >
+                                        <set
+                                            attributeName="opacity"
+                                            begin="0.8s"
+                                            to="1"
+                                            fill="freeze"
+                                        />
+                                        <animate
+                                            attributeName="d"
+                                            begin="0.8s"
+                                            dur="0.2s"
+                                            fill="freeze"
+                                            values="
+                                                M15.24 6.37c0.41 0.23 0.8 0.51 1.14 0.83c0.22 0.2 0.42 0.41 0.61 0.63c0.47 0.57 0.86 1.22 1.12 1.94c0.09 0.26 0.17 0.54 0.24 0.82c0.1 0.45 0.15 0.93 0.15 1.41;
+                                                M15.24 6.37c0.41 0.23 0.8 0.51 1.14 0.83c0 0 2.62 -1.08 2.63 -1.06c0 0 1.56 2.7 1.56 2.7c0.01 0.03 -2.22 1.75 -2.22 1.75c0.1 0.45 0.15 0.93 0.15 1.41
+                                            "
+                                        />
+                                    </path>
+                                    <!-- Ornamen kanan bawah -->
+                                    <path
+                                        d="M18.5 11.99c0.01 0.47 -0.04 0.95 -0.15 1.4c0 0 2.25 1.73 2.23 1.75c0 0 -1.56 2.7 -1.56 2.7c-0.02 0.02 -2.63 -1.05 -2.63 -1.05c-0.34 0.31 -0.73 0.59 -1.15 0.83"
+                                        opacity="0"
+                                    >
+                                        <set
+                                            attributeName="opacity"
+                                            begin="0.8s"
+                                            to="1"
+                                            fill="freeze"
+                                        />
+                                        <animate
+                                            attributeName="d"
+                                            begin="0.8s"
+                                            dur="0.2s"
+                                            fill="freeze"
+                                            values="
+                                                M18.5 11.99c0.01 0.47 -0.04 0.95 -0.15 1.4c-0.06 0.29 -0.15 0.57 -0.24 0.84c-0.26 0.69 -0.63 1.35 -1.12 1.94c-0.18 0.21 -0.38 0.42 -0.59 0.62c-0.34 0.31 -0.73 0.59 -1.15 0.83;
+                                                M18.5 11.99c0.01 0.47 -0.04 0.95 -0.15 1.4c0 0 2.25 1.73 2.23 1.75c0 0 -1.56 2.7 -1.56 2.7c-0.02 0.02 -2.63 -1.05 -2.63 -1.05c-0.34 0.31 -0.73 0.59 -1.15 0.83
+                                            "
+                                        />
+                                    </path>
+                                    <!-- Ornamen bawah -->
+                                    <path
+                                        d="M15.26 17.62c-0.4 0.24 -0.84 0.44 -1.29 0.57c0 0 -0.37 2.81 -0.4 2.81c0 0 -3.12 0 -3.12 0c-0.03 -0.01 -0.41 -2.8 -0.41 -2.8c-0.44 -0.14 -0.88 -0.34 -1.3 -0.58"
+                                        opacity="0"
+                                    >
+                                        <set
+                                            attributeName="opacity"
+                                            begin="0.8s"
+                                            to="1"
+                                            fill="freeze"
+                                        />
+                                        <animate
+                                            attributeName="d"
+                                            begin="0.8s"
+                                            dur="0.2s"
+                                            fill="freeze"
+                                            values="
+                                                M15.26 17.62c-0.4 0.24 -0.84 0.44 -1.29 0.57c-0.28 0.09 -0.57 0.16 -0.85 0.21c-0.73 0.12 -1.49 0.13 -2.24 0c-0.27 -0.05 -0.55 -0.12 -0.83 -0.2c-0.44 -0.14 -0.88 -0.34 -1.3 -0.58;
+                                                M15.26 17.62c-0.4 0.24 -0.84 0.44 -1.29 0.57c0 0 -0.37 2.81 -0.4 2.81c0 0 -3.12 0 -3.12 0c-0.03 -0.01 -0.41 -2.8 -0.41 -2.8c-0.44 -0.14 -0.88 -0.34 -1.3 -0.58
+                                            "
+                                        />
+                                    </path>
+                                    <!-- Ornamen kiri bawah -->
+                                    <path
+                                        d="M8.76 17.63c-0.41 -0.23 -0.8 -0.51 -1.14 -0.83c0 0 -2.62 1.08 -2.63 1.06c0 0 -1.56 -2.7 -1.56 -2.7c-0.01 -0.03 2.22 -1.75 2.22 -1.75c-0.1 -0.45 -0.15 -0.93 -0.15 -1.41"
+                                        opacity="0"
+                                    >
+                                        <set
+                                            attributeName="opacity"
+                                            begin="0.8s"
+                                            to="1"
+                                            fill="freeze"
+                                        />
+                                        <animate
+                                            attributeName="d"
+                                            begin="0.8s"
+                                            dur="0.2s"
+                                            fill="freeze"
+                                            values="
+                                                M8.76 17.63c-0.41 -0.23 -0.8 -0.51 -1.14 -0.83c-0.22 -0.2 -0.42 -0.41 -0.61 -0.63c-0.47 -0.57 -0.86 -1.22 -1.12 -1.94c-0.09 -0.26 -0.17 -0.54 -0.24 -0.82c-0.1 -0.45 -0.15 -0.93 -0.15 -1.41;
+                                                M8.76 17.63c-0.41 -0.23 -0.8 -0.51 -1.14 -0.83c0 0 -2.62 1.08 -2.63 1.06c0 0 -1.56 -2.7 -1.56 -2.7c-0.01 -0.03 2.22 -1.75 2.22 -1.75c-0.1 -0.45 -0.15 -0.93 -0.15 -1.41
+                                            "
+                                        />
+                                    </path>
+                                    <!-- Ornamen kiri atas -->
+                                    <path
+                                        d="M5.5 12.01c-0.01 -0.47 0.04 -0.95 0.15 -1.4c0 0 -2.25 -1.73 -2.23 -1.75c0 0 1.56 -2.7 1.56 -2.7c0.02 -0.02 2.63 1.05 2.63 1.05c0.34 -0.31 0.73 -0.59 1.15 -0.83"
+                                        opacity="0"
+                                    >
+                                        <set
+                                            attributeName="opacity"
+                                            begin="0.8s"
+                                            to="1"
+                                            fill="freeze"
+                                        />
+                                        <animate
+                                            attributeName="d"
+                                            begin="0.8s"
+                                            dur="0.2s"
+                                            fill="freeze"
+                                            values="
+                                                M5.5 12.01c-0.01 -0.47 0.04 -0.95 0.15 -1.4c0.06 -0.29 0.15 -0.57 0.24 -0.84c0.26 -0.69 0.63 -1.35 1.12 -1.94c0.18 -0.21 0.38 -0.42 0.59 -0.62c0.34 -0.31 0.73 -0.59 1.15 -0.83;
+                                                M5.5 12.01c-0.01 -0.47 0.04 -0.95 0.15 -1.4c0 0 -2.25 -1.73 -2.23 -1.75c0 0 1.56 -2.7 1.56 -2.7c0.02 -0.02 2.63 1.05 2.63 1.05c0.34 -0.31 0.73 -0.59 1.15 -0.83
+                                            "
+                                        />
+                                    </path>
+                                    <!-- Ornamen atas -->
+                                    <path
+                                        d="M8.74 6.38c0.4 -0.24 0.84 -0.44 1.29 -0.57c0 0 0.37 -2.81 0.4 -2.81c0 0 3.12 0 3.12 0c0.03 0.01 0.41 2.8 0.41 2.8c0.44 0.14 0.88 0.34 1.3 0.58"
+                                        opacity="0"
+                                    >
+                                        <set
+                                            attributeName="opacity"
+                                            begin="0.8s"
+                                            to="1"
+                                            fill="freeze"
+                                        />
+                                        <animate
+                                            attributeName="d"
+                                            begin="0.8s"
+                                            dur="0.2s"
+                                            fill="freeze"
+                                            values="
+                                                M8.74 6.38c0.4 -0.24 0.84 -0.44 1.29 -0.57c0.28 -0.09 0.57 -0.16 0.85 -0.21c0.73 -0.12 1.49 -0.13 2.24 0c0.27 0.05 0.55 0.12 0.83 0.2c0.44 0.14 0.88 0.34 1.3 0.58;
+                                                M8.74 6.38c0.4 -0.24 0.84 -0.44 1.29 -0.57c0 0 0.37 -2.81 0.4 -2.81c0 0 3.12 0 3.12 0c0.03 0.01 0.41 2.8 0.41 2.8c0.44 0.14 0.88 0.34 1.3 0.58
+                                            "
+                                        />
+                                    </path>
+                                </g>
+                            </svg>
+                        </span>
+                        <!-- END ICON SETTING -->
+                        Setting
+                    </a>
+                    <!-- END MENU SETTING -->
+                </nav>
+                <!-- END NAVIGASI SIDEBAR -->
+                <!-- CATATAN SIDEBAR -->
+                <div class="sidebar-note">
+                    <strong>
+                        CRUD OPERATOR
+                    </strong>
+                    <p class="deskripsi-justify">
+                    Di project pertama saya membuat dashboard sederhana untuk
+                    ngelola data pengguna, mulai dari tambah data, edit,
+                    hapus, cari data, sampai menampilkan statistik pengguna
+                </p>
+                </div>
+                <!-- END CATATAN SIDEBAR -->
+                <!-- PROFIL SIDEBAR DAN GITHUB -->
+                <a
+                    href="https://github.com/waifujahat/my-first-crud"
+                    class="sidebar-footer profile-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Buka GitHub Repository Nurwidhi Maulana"
+                >
+                    <span class="avatar">
+                        N
+                    </span>
+
+                    <span>
+                        <strong>Nurwidhi Maulana</strong>
+                        <small>Github Repository</small>
+                    </span>
+                </a>
+                <!-- END PROFIL SIDEBAR DAN GITHUB -->
+            </aside>
+            <!-- END SIDEBAR UTAMA -->
+            <!-- OVERLAY SIDEBAR -->
+            <div
+                class="sidebar-overlay"
+                id="sidebarOverlay"
+                aria-hidden="true"
+            ></div>
+            <!-- END OVERLAY SIDEBAR -->
+            <!-- AREA KONTEN APLIKASI -->
+            <div class="app-content">
+                <!-- TOPBAR DAN BREADCRUMB -->
+                <div class="topbar">
+                    <div class="topbar-trail">
+                        <!-- TOMBOL TOGGLE SIDEBAR -->
+                        <button
+                            type="button"
+                            class="sidebar-toggle"
+                            id="btnToggleSidebar"
+                            aria-label="Buka sidebar"
+                            aria-controls="sidebarUtama"
+                            aria-expanded="true"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="22"
+                                height="22"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                aria-hidden="true"
+                            >
+                                <path d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        </button>
+                        <!-- END TOMBOL TOGGLE SIDEBAR -->
+                        CRUD OPERATOR
+                        <span class="breadcrumb-arrow">
+                            /
+                        </span>
+                        <span id="pageBreadcrumb">Beranda</span>
+                    </div>
+                <div class="topbar-right">
+                    <a
+                        href="https://github.com/waifujahat/my-first-crud"
+                        class="topbar-profile-link profile-link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Buka GitHub Repository Nurwidhi Maulana"
+                    >
+                        <span class="topbar-profile">
+                            <strong>Nurwidhi Maulana</strong>
+                        </span>
+                        <span class="topbar-avatar">
+                            N
+                        </span>
+                    </a>
+                </div>
+                </div>
+                <!-- END TOPBAR DAN BREADCRUMB -->
+                <!-- HEADER HALAMAN -->
+                <header class="header">
+                    <div>
+                        <h1>
+                            Dashboard Pengguna
+                        </h1>
+                        <p>
+                            Pantau, cari, dan kelola informasi pengguna dalam satu tempat.
+                        </p>
+                    </div>
+                </header>
+                <!-- END HEADER HALAMAN -->
+                <!-- KONTEN UTAMA -->
+                <main>
+                <!-- PAGE BERANDA -->
+                <div id="pageOverview" class="dashboard-page">
+                    <!-- STATISTIK DASHBOARD -->
+                    <section class="card statistik-section" id="statistik">
+                        <div class="section-header">
+                            <h2>
+                                Statistik Pengguna
+                            </h2>
+                            <p>
+                                Informasi terkini berdasarkan data yang tersimpan
+                            </p>
+                        </div>
+                        <!-- TOTAL PENGGUNA -->
+                        <div class="statistik-group">
+                            <h3 class="statistik-group-title">
+                                Total Pengguna
+                            </h3>
+                            <div class="statistik-grid">
+                                <div class="statistik-item">
+                                    <h3>
+                                        Total Pengguna
+                                    </h3>
+                                    <p id="totalPengguna">
+                                        0
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END TOTAL PENGGUNA -->
+                        <!-- STATISTIK JENIS KELAMIN -->
+                        <div class="statistik-group">
+                            <h3 class="statistik-group-title">
+                                Jenis Kelamin
+                            </h3>
+                            <div class="statistik-grid">
+                                <div class="statistik-item">
+                                    <h3>
+                                        Laki-laki
+                                    </h3>
+                                    <p id="totalLaki">
+                                        0
+                                    </p>
+                                </div>
+                                <div class="statistik-item">
+                                    <h3>
+                                        Perempuan
+                                    </h3>
+                                    <p id="totalPerempuan">
+                                        0
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END STATISTIK JENIS KELAMIN -->
+                        <!-- STATISTIK WARGA NEGARA -->
+                        <div class="statistik-group">
+                            <h3 class="statistik-group-title">
+                                Warga Negara
+                            </h3>
+                            <div class="statistik-grid">
+                                <div class="statistik-item">
+                                    <h3>
+                                        Indonesia
+                                    </h3>
+                                    <p id="totalIndonesia">
+                                        0
+                                    </p>
+                                </div>
+                                <div class="statistik-item">
+                                    <h3>
+                                        Malaysia
+                                    </h3>
+                                    <p id="totalMalaysia">
+                                        0
+                                    </p>
+                                </div>
+                                <div class="statistik-item">
+                                    <h3>
+                                        Negara Lainnya
+                                    </h3>
+                                    <p id="totalNegaraLainnya">
+                                        0
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END STATISTIK WARGA NEGARA -->
+                    </section>
+                    <!-- END STATISTIK DASHBOARD -->
+                </div>
+                    <!-- END PAGE BERANDA -->
+                    <!-- PAGE DATA PENGGUNA -->
+                    <div id="pagePengguna" class="dashboard-page" hidden>
+                        <!-- LAYOUT UTAMA CRUD -->
+                        <div class="crud-layout">
+                        <!-- MODAL TAMBAH PENGGUNA -->
+                        <dialog class="crud-form" id="modalTambahPengguna">
+                            <section class="card" id="bagianForm">
+                                <div class="section-header modal-header">
+                                    <div>
+                                        <h2>
+                                            Tambah Pengguna
+                                        </h2>
+                                        <p>
+                                            Isi data berikut untuk membuat profil pengguna baru.
+                                        </p>
+                                    </div>
+                                    <button aria-label="Tutup form tambah pengguna" class="modal-close" id="btnTutupModal" type="button">
+                                        <svg aria-hidden="true" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-width="2.5" viewBox="0 0 24 24" width="18">
+                                            <path d="M18 6 6 18M6 6l12 12">
+                                            </path>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <!-- FORM TAMBAH PENGGUNA -->
+                                <form id="FormPengguna">
+                                <!-- GENERATE USER DARI API -->
+                                <div class="form-group">
+                                    <button
+                                        type="button"
+                                        id="btnGenerateUser"
+                                        class="btn-reset"
+                                    >
+                                        + Isi Cepat
+                                    </button>
+                                </div>
+                                <!-- END GENERATE USER DARI API -->
+
+                                <!-- NAMA -->
+                                    <div class="form-group">
+                                        <label for="nama">
+                                            Nama Lengkap
+                                        </label>
+                                        <input id="nama" maxlength="60" minlength="3" name="nama" placeholder="Contoh: Aulia Putri" required="" type="text"/>
+                                    </div>
+                                    <!-- END NAMA -->
+                                    <!-- EMAIL -->
+                                    <div class="form-group">
+                                        <label for="email">
+                                            Email
+                                        </label>
+                                        <input id="email" maxlength="254" name="email" placeholder="nama@domain.com" required="" type="email"/>
+                                    </div>
+                                    <!-- END EMAIL -->
+                                    <!-- NOMOR HP -->
+                                    <div class="form-group">
+                                        <label for="nomorHP">
+                                            Nomor HP
+                                        </label>
+                                        <input id="nomorHP" inputmode="numeric" maxlength="16" name="nomorHP" placeholder="Contoh: 0812xxxxxxxx" required="" type="tel"/>
+                                    </div>
+                                    <!-- END NOMOR HP -->
+                                    <!-- JENIS KELAMIN -->
+                                    <fieldset class="form-group radio-fieldset">
+                                        <legend>
+                                            Jenis Kelamin
+                                        </legend>
+                                        <div class="radio-group">
+                                            <label>
+                                                <input name="gender" required="" type="radio" value="laki"/>
+                                                Laki-laki
+                                            </label>
+                                            <label>
+                                                <input name="gender" type="radio" value="perempuan"/>
+                                                Perempuan
+                                            </label>
+                                        </div>
+                                    </fieldset>
+                                    <!-- END JENIS KELAMIN -->
+                                    <!-- WARGA NEGARA -->
+                                    <fieldset class="form-group radio-fieldset">
+                                        <legend>
+                                            Warga Negara
+                                        </legend>
+                                        <div class="radio-group">
+                                            <label>
+                                                <input name="warga_negara" required="" type="radio" value="indonesia"/>
+                                                Indonesia
+                                            </label>
+                                            <label>
+                                                <input name="warga_negara" type="radio" value="malaysia"/>
+                                                Malaysia
+                                            </label>
+                                            <label>
+                                                <input name="warga_negara" type="radio" value="amerika_serikat"/>
+                                                Amerika Serikat
+                                            </label>
+                                            <label>
+                                                <input name="warga_negara" type="radio" value="jepang"/>
+                                                Jepang
+                                            </label>
+                                            <label>
+                                                <input name="warga_negara" type="radio" value="korea_selatan"/>
+                                                Korea Selatan
+                                            </label>
+                                            <label>
+                                                <input name="warga_negara" type="radio" value="lainnya"/>
+                                                Lainnya
+                                            </label>
+                                        </div>
+                                    </fieldset>
+                                    <!-- END WARGA NEGARA -->
+                                    <!-- TOMBOL SIMPAN PENGGUNA -->
+                                    <button class="btn-primary" type="submit">
+                                        Simpan Pengguna
+                                    </button>
+                                    <!-- END TOMBOL SIMPAN PENGGUNA -->
+                                </form>
+                                <!-- END FORM TAMBAH PENGGUNA -->
+                            </section>
+                        </dialog>
+                        <!-- END MODAL TAMBAH PENGGUNA -->
+                        <!-- TABEL SEBELAH KANAN -->
+                        <div class="crud-table" id="pengguna">
+                            <section class="card">
+                                <!-- JUDUL TABEL DAN TOMBOL TAMBAH -->
+                                <div class="table-header">
+                                    <div>
+                                        <h2>
+                                            Daftar Pengguna
+                                        </h2>
+                                        <p>
+                                            Lihat dan perbarui seluruh profil pengguna
+                                        </p>
+                                    </div>
+                                    <button class="btn-primary" id="btnTambahData" type="button">
+                                        + Tambah Pengguna
+                                    </button>
+                                </div>
+                                <!-- END JUDUL TABEL DAN TOMBOL TAMBAH -->
+                                <!-- PENCARIAN DAN FILTER -->
+                                <div class="search-container">
+                                    <!-- PILIH KOLOM -->
+                                    <div class="search-group">
+                                        <label for="kolomPencarian">
+                                            Cari Berdasarkan
+                                        </label>
+                                        <select id="kolomPencarian">
+                                            <option value="nama">
+                                                Nama
+                                            </option>
+                                            <option value="email">
+                                                Email
+                                            </option>
+                                            <option value="nomorHP">
+                                                Nomor HP
+                                            </option>
+                                            <option value="gender">
+                                                Jenis Kelamin
+                                            </option>
+                                            <option value="negara">
+                                                Warga Negara
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <!-- END PILIH KOLOM -->
+                                    <!-- KATA KUNCI -->
+                                    <div class="search-group">
+                                        <label for="cariPengguna">
+                                            Cari Pengguna
+                                        </label>
+                                        <input autocomplete="off" id="cariPengguna" placeholder="Ketik nama atau data yang ingin dicari..." type="search"/>
+                                    </div>
+                                    <!-- END KATA KUNCI -->
+                                    <!-- FILTER GENDER -->
+                                    <div class="search-group">
+                                        <label for="filterGender">
+                                            Jenis Kelamin
+                                        </label>
+                                        <select id="filterGender">
+                                            <option value="semua">
+                                                Semua
+                                            </option>
+                                            <option value="Laki-laki">
+                                                Laki-laki
+                                            </option>
+                                            <option value="Perempuan">
+                                                Perempuan
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <!-- END FILTER GENDER -->
+                                    <!-- TOMBOL CARI -->
+                                    <button class="btn-primary" id="btnCari" type="button">
+                                        Cari Data
+                                    </button>
+                                    <!-- END TOMBOL CARI -->
+                                    <!-- TOMBOL RESET -->
+                                    <button class="btn-reset" id="resetPencarian" type="button">
+                                        Reset
+                                    </button>
+                                    <!-- END TOMBOL RESET -->
+                                </div>
+                                <!-- END PENCARIAN DAN FILTER -->
+                                <!-- INFORMASI HASIL PENCARIAN -->
+                                <p aria-live="polite" id="hasilPencarian">
+                                </p>
+                                <!-- END INFORMASI HASIL PENCARIAN -->
+                                <!-- TABEL -->
+                                <div class="table-wrapper">
+                                    <table>
+                                        <caption class="sr-only">
+                                            Daftar pengguna berisi nama, email, nomor HP, jenis kelamin, warga negara dan tindakan
+                                        </caption>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">
+                                                    No
+                                                </th>
+                                                <th scope="col">
+                                                    Nama
+                                                </th>
+                                                <th scope="col">
+                                                    Email
+                                                </th>
+                                                <th scope="col">
+                                                    Nomor HP
+                                                </th>
+                                                <th scope="col">
+                                                    Jenis Kelamin
+                                                </th>
+                                                <th scope="col">
+                                                    Warga Negara
+                                                </th>
+                                                <th scope="col">
+                                                    Aksi
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <!-- DATA PENGGUNA -->
+                                        <tbody id="TabelPengguna">
+                                        </tbody>
+                                        <!-- END DATA PENGGUNA -->
+                                    </table>
+                                </div>
+                                <!-- END TABEL -->
+                            </section>
+                        </div>
+                        <!-- END TABEL SEBELAH KANAN -->
+                    </div>
+                    <!-- END LAYOUT UTAMA CRUD -->
+                </div>
+                <!-- END PAGE DATA PENGGUNA -->
+                 <!-- PAGE SETTING -->
+                <div id="pageSetting" class="dashboard-page" hidden>
+
+                    <!-- KARTU PENGATURAN -->
+                    <section class="card settings-section">
+
+                        <!-- PENGATURAN TAMPILAN -->
+                        <div class="settings-appearance">
+
+                            <div class="section-header">
+                                <h2>Tampilan Aplikasi</h2>
+                                <p>Pilih tema tampilan yang nyaman digunakan</p>
+                            </div>
+
+                            <div class="theme-setting-row">
+                                <div class="theme-setting-info">
+                                    <strong>Dark Mode</strong>
+                                    <span id="themeStatus">Mode terang aktif</span>
+                                </div>
+
+                                <label class="theme-switch">
+                                    <input
+                                        type="checkbox"
+                                        id="themeToggle"
+                                        aria-label="Aktifkan mode gelap"
+                                    >
+                                    <span class="theme-slider"></span>
+                                </label>
+                            </div>
+
+                        </div>
+                        <!-- END PENGATURAN TAMPILAN -->
+                        <!-- INFORMASI APLIKASI -->
+                        <div class="section-header">
+                            <h2>Tentang Aplikasi</h2>
+                            <p>Informasi sistem CRUD OPERATOR</p>
+                        </div>
+
+                        <div class="settings-info">
+                            <div>
+                                <span>Nama Aplikasi</span>
+                                <strong>CRUD OPERATOR</strong>
+                            </div>
+
+                            <div>
+                                <span>Teknologi</span>
+                                <strong>HTML, CSS, JavaScript</strong>
+                            </div>
+
+                            <div>
+                                <span>Penyimpanan</span>
+                                <strong>Local Storage</strong>
+                            </div>
+
+                            <div>
+                                <span>Pengembang</span>
+                                <strong>waifujahat - Nurwidhi Maulana Nugraha</strong>
+                            </div>
+                        </div>
+                        <!-- END INFORMASI APLIKASI -->
+
+                    </section>
+                    <!-- END KARTU PENGATURAN -->
+
+                </div>
+                <!-- END PAGE SETTING -->
+            </main>
+            <!-- END KONTEN UTAMA -->
+                <!-- FOOTER -->
+                <footer>
+                    <p>
+                        Belajar CRUD - Nurwidhi Maulana Nugraha
+                    </p>
+                    <a href="https://github.com/waifujahat/my-first-crud" rel="noopener noreferrer" target="_blank">
+                        Github Repository
+                    </a>
+                </footer>
+                <!-- END FOOTER -->
+            </div>
+            <!-- END AREA KONTEN APLIKASI -->
+        </div>
+        <!-- END APP SHELL -->
+        <!-- MODAL KONFIRMASI -->
+        <dialog aria-describedby="pesanKonfirmasi" aria-labelledby="judulKonfirmasi" class="modal-konfirmasi" id="modalKonfirmasi">
+            <div class="konfirmasi-content">
+                <span aria-hidden="true" class="confirm-emblem">
+                    ?
+                </span>
+                <h2 id="judulKonfirmasi">
+                    Periksa Tindakan
+                </h2>
+                <p id="pesanKonfirmasi">
+                    Pastikan pilihan
+                </p>
+                <form class="konfirmasi-actions" method="dialog">
+                    <button class="btn-reset" type="submit" value="tidak">
+                        Tidak
+                    </button>
+                    <button class="btn-primary" id="btnYaKonfirmasi" type="submit" value="ya">
+                        Ya
+                    </button>
+                </form>
+            </div>
+        </dialog>
+        <!-- END MODAL KONFIRMASI -->
+        <!-- TOAST NOTIFICATION -->
+        <div aria-atomic="true" aria-live="polite" class="toast" hidden="" id="toast" role="status">
+        </div>
+        <!-- END TOAST NOTIFICATION -->
+
+       <!-- RADIO -->
+        <section class="music-player" id="musicPlayer">
+
+            <!-- TOMBOL BUKA PEMUTAR MUSIK -->
+            <button
+                type="button"
+                class="music-toggle"
+                id="musicToggle"
+                aria-label="Buka pemutar musik"
+                aria-expanded="false"
+                aria-controls="musicPanel"
+            >
+                ♫
+            </button>
+            <!-- END TOMBOL BUKA PEMUTAR MUSIK -->
+
+            <!-- PANEL PEMUTAR MUSIK -->
+            <div class="music-panel" id="musicPanel" hidden>
+
+                <!-- HEADER PEMUTAR MUSIK -->
+                <div class="music-header">
+                    <strong>Pemutar Musik Lokal</strong>
+                    <button
+                        type="button"
+                        id="musicClose"
+                        aria-label="Tutup pemutar"
+                    >
+                        &times;
+                    </button>
+                </div>
+                <!-- END HEADER PEMUTAR MUSIK -->
+
+                <!-- INFORMASI LAGU -->
+                <div class="music-track">
+                    <img id="musicCover" alt="Cover lagu" hidden>
+
+                    <div class="music-track-info">
+                        <strong id="musicTitle">Belum ada lagu</strong>
+                        <span id="musicArtist">Local Music Player</span>
+                    </div>
+                </div>
+                <!-- END INFORMASI LAGU -->
+
+                <!-- KONTROL MUSIK -->
+                <div class="music-controls">
+                    <button type="button" id="musicPlay" aria-label="Putar musik" disabled>
+                        ▶
+                    </button>
+                    <button type="button" id="musicNext" aria-label="Putar lagu acak berikutnya" disabled>
+                        ⏭
+                    </button>
+                </div>
+                <!-- END KONTROL MUSIK -->
+
+                <p id="musicStatus" role="status">
+                    Menyiapkan musik
+                </p>
+
+                <a id="musicCredit" href="#" hidden></a>
+
+                <audio id="musicAudio" preload="none"></audio>
+
+            </div>
+            <!-- END PANEL PEMUTAR MUSIK -->
+        </section>
+        <!-- END RADIO -->
+
+        <!-- JAVASCRIPT APLIKASI -->
+        <script type="module" src="./assets/js/main.js"></script>
+        <!-- END JAVASCRIPT APLIKASI -->
+    </body>
+</html>
