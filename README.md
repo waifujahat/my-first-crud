@@ -6,7 +6,7 @@
 
 Dashboard sederhana untuk mengelola data pengguna menggunakan **HTML, CSS dan JavaScript**
 
-Proyek ini awalnya saya buat untuk latihan CRUD (*Create, Read, Update, Delete*). Seiring pengembangan, saya menambahkan pencarian, filter, validasi formulir, statistik pengguna dan penyimpanan data menggunakan Local Storage
+Proyek ini awalnya saya buat untuk latihan CRUD (_Create, Read, Update, Delete_). Seiring pengembangan, saya menambahkan pencarian, filter, validasi formulir, statistik pengguna dan penyimpanan data menggunakan Local Storage
 
 Aplikasi ini menggunakan **JavaScript** tanpa framework
 
@@ -37,14 +37,14 @@ Saat pertama kali dibuka **tanpa data tersimpan sebelumnya**, aplikasi menampilk
 
 ## Teknologi yang Digunakan
 
-| Teknologi | Kegunaan |
-| --- | --- |
-| HTML5 | Struktur halaman dan formulir |
-| CSS3 | Tampilan, layout responsif, dan tema |
-| JavaScript (ES Modules) | Logika CRUD dan interaksi aplikasi |
-| Local Storage | Penyimpanan data dan preferensi pada browser |
-| Fetch API | Mengambil data dari Random User API |
-| Node.js Test Runner | Menjalankan pengujian otomatis |
+| Teknologi               | Kegunaan                                     |
+| ----------------------- | -------------------------------------------- |
+| HTML5                   | Struktur halaman dan formulir                |
+| CSS3                    | Tampilan, layout responsif, dan tema         |
+| JavaScript (ES Modules) | Logika CRUD dan interaksi aplikasi           |
+| Local Storage           | Penyimpanan data dan preferensi pada browser |
+| Fetch API               | Mengambil data dari Random User API          |
+| Node.js Test Runner     | Menjalankan pengujian otomatis               |
 
 Proyek ini tidak menggunakan React, Vue atau framework backend
 
