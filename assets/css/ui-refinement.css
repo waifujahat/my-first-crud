@@ -1,0 +1,32 @@
+:root {
+  --ui-focus-ring: rgba(105, 88, 223, 0.35);
+}
+
+.app-sidebar .nav-link {
+  border-radius: 12px;
+  transition:
+    background-color 180ms ease,
+    color 180ms ease;
+}
+
+.app-content > .header h1 {
+  line-height: 1.25;
+  letter-spacing: -0.5px;
+}
+
+.app-content > .header p {
+  line-height: 1.6;
+}
+
+.app-sidebar .nav-link:focus-visible,
+.app-content button:focus-visible,
+.app-content a:focus-visible {
+  outline: 2px solid var(--ui-focus-ring);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .app-sidebar .nav-link {
+    transition: none;
+  }
+}
